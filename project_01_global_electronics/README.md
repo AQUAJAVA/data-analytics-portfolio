@@ -273,58 +273,7 @@ This project analyzes a global retail electronics dataset using SQL to derive in
 
 ---
 
-## Key Learnings & Mistakes
 
-While working on this project, I learned several practical lessons that go beyond writing long or complex SQL queries. Some of these came from mistakes I made during the process.
-
-### 1. Importance of Correct Join Conditions
-At one point, I mistakenly wrote a join condition like:
-- joining a table to itself on the same column (e.g. `s.customer_key = s.customer_key`)
-
-This caused incorrect results and took significant time to debug.  
-It reinforced how critical it is to **carefully verify join logic**, especially when working with multiple tables.
-
----
-
-### 2. Being Clear About the Level of Analysis
-In customer retention analysis, I initially tried to use the first order date for logic that was already satisfied by my customer segmentation buckets.
-
-This taught me to:
-- clearly define the **goal of each query**
-- avoid adding unnecessary logic when it does not change the outcome
-
----
-
-### 3. Understanding the Side Effects of Formatting Functions
-I learned that functions like `FORMAT()` convert numeric values into strings (`NVARCHAR`), which can cause issues in:
-- further calculations
-- UNION operations
-- sorting and aggregation
-
-As a result, formatting was applied only at the **final output stage**, not during intermediate calculations.
-
----
-
-### 4. Data Type Consistency in UNION Operations
-When combining results using `UNION`, I faced errors due to mismatched data types between columns.
-
-This highlighted the importance of:
-- explicitly casting columns
-- ensuring consistent data types across all SELECT statements
-
----
-
-### 5. Debugging Is Part of Real SQL Work
-Some issues took a long time to identify and required stepping back, checking assumptions, and even asking for help.
-
-This project made it clear that:
-- debugging is a normal part of SQL work
-- slow progress often means deeper understanding later
-
----
-
-Overall, these mistakes helped me build better habits around validation, query structure, and defensive SQL writing.
- 
 ## Personal Note
 
 I am genuinely proud of this project because most of the work was done independently, without following tutorials or copying solutions.
@@ -338,4 +287,3 @@ AI assistance was used selectively and responsibly, mainly for:
 
 The core logic, problem framing, and analytical decisions throughout the project were my own. This project reflects my current understanding of SQL and my approach to solving real-world data problems.
 
-## MY AIM IS TO BE SO GOOD THAT THAT THERE IS AT LEAST ONE THING COMMON BETWEEN ME AND AN A.I. - WE BOTH ARE IRREPLACEABLE 
